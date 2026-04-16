@@ -1,36 +1,108 @@
-body {
+/* 기본설정 */
+html, body {
   margin: 0;
   font-family: sans-serif;
 }
 
+
+/* 레이아웃 */
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+
+/* header */
 nav {
   position: fixed;
   top: 0;
   width: 100%;
   background: black;
-  padding: 15px 80px;
-  font-size: 18px;
-
-  position: relative;
+  padding: 15px 40px;
   display: flex;
   align-items: center;
+  justify-content: center;
+  z-index: 1000;
 }
 
+/* 로고 */
+.logo {
+  flex: 1;
+  margin-left: 40px;
+}
+
+.logo img {
+  height: 45px;
+}
+
+/* 메뉴 */
 .menu {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-70%);  /* 중앙고정 */
+  flex: 1;
   display: flex;
+  justify-content: center;
   gap: 30px;
 }
 
 .menu a {
   color: white;
   text-decoration: none;
+  position: relative;
 }
 
+/* hover 효과 */
+.menu a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: 0.3s;
+}
+
+.menu a:hover::after {
+  width: 100%;
+}
+
+/* 오른쪽 공간 */
+.nav-right {
+  flex: 1;
+}
+
+
+/* 드롭다운 */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: black;
+  min-width: 140px;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px;
+  color: white;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+
+/* 콘텐츠 */
 section {
-  padding: 100px 20px;
+  padding: 120px 20px; /* nav 겹침 방지 */
 }
 
 .hero {
@@ -42,61 +114,74 @@ section {
   color: white;
 }
 
+
+/* 하위탭 이동 버튼*/
+.buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.buttons a {
+  padding: 15px 30px;
+  background: black;
+  color: white;
+  text-decoration: none;
+}
+
+
+/* 문의 폼= */
+.contact-section {
+  padding: 120px 20px;
+  text-align: center;
+}
+
+form {
+  max-width: 500px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+input, textarea {
+  padding: 12px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+}
+
+button {
+  padding: 12px;
+  background: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #333;
+}
+
+
+/*footer */
 footer {
   background: #222;
   color: white;
-  text-align: center;
-  padding: 40px 60px;
+  padding: 40px;
+}
+
+.footer-content {
+  max-width: 800px;
+  margin-left: 40px;
 }
 
 .footer-content h3 {
-  max-width: 800px;
   font-size: 25px;
-  margin-left: 3%;
-  margin-bottom: 40px;
-  text-align: left;
+  margin-bottom: 20px;
 }
 
 .footer-content p {
-  max-width: 800px;
-  font-size: 15px;
-  margin-left: 3%;
-  text-align: left;
-}
-
-.footer-content .info {
-    margin-top: 10px;
-    margin-bottom: 0px;
-}
-
-.footer-content .copyright {
-    margin-top: 30px;
-}
-
-/* 상단 탭 로고 크기 조절*/
-.logo img {
-    height: 45px;
-}
-
-.dropdown {
-  position: relative;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: black;
-  min-width: 120px;
-}
-
-.dropdown-content a {
-  display: block;
-  padding: 10px;
-  color: white;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
+  font-size: 14px;
+  margin: 5px 0;
 }

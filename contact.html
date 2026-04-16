@@ -2,18 +2,30 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8">
-  <title>연혁</title>
+  <title>문의하기</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<script src="script.js"></script>
+<!-- 문의 폼 -->
+<section class="contact-section">
+  <h2>문의하기</h2>
 
-<section>
-  <h2>문의</h2>
-  <p>여기에 내용</p>
+  <form id="contact-form">
+
+  <input type="text" name="name" placeholder="이름" required>
+
+  <input type="email" name="email" placeholder="이메일" required>
+
+  <textarea name="message" placeholder="문의내용" rows="5" required></textarea>
+
+  <button type="submit">확인</button>
+</form>
+
+  <p id="result-message"></p>
+
 </section>
 
-
+<script src="script.js"></script>
 </body>
 </html>

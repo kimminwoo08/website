@@ -36,3 +36,31 @@ fetch('news.json')
   .then(data => {
     document.body.insertAdjacentHTML("beforeend", data);
   });
+
+//문의내용 이메일로 전송
+const form = document.getElementById("contact-form");
+const result = document.getElementById("result-message");
+
+form.addEventListener("submit", function(e) {
+  e.preventDefault(); //formspress페이지로 이동막기
+
+  const data = new FormData(form);
+
+  fetch("https://formspree.io/f/xqewpplj", {
+    method: "POST",
+    body: data,
+    headers: {
+      'Accept': 'application/json'
+    }
+  })
+  .then(response => {
+    if (response.ok) {
+      window.location.href = "contact_confirm.html";
+    } else {
+      alert("전송 실패. 다시 시도해주세요.");
+    }
+  })
+  .catch(() => {
+    result.innerText = "오류 발생";
+  });
+});
