@@ -1,10 +1,30 @@
 [
   {
-    "title": "단체 행사 개최",
-    "date": "2026-04-14"
+    "title": "대한민국 최초 FRC 대회 출전… 광주 광덕고 ‘SWing’, 최우수 신인상 쾌거",
+    "desc": "10년 노하우와 따뜻한 나눔의 결실… 글로벌 무대서 K-STEAM 교육 저력 입증",
+    "date": "2026-03-19",
+    "link": "https://www.newswire.co.kr/newsRead.php?no=1030635",
+    "image": "images/news0319.jpg"
   },
   {
-    "title": "새 프로젝트 시작",
-    "date": "2026-04-10"
+    "title": "사단법인 상상-광주광덕고, 취약계층 아동 위한 ‘STEAM/AI 교육’ 사회공헌사업 성료",
+    "desc": "광주광덕고 FRC팀 ‘SWing’ 멘토 참여… 광주디딤돌지역아동센터서 교육 재능기부 성황리 마무리",
+    "date": "2026-03-06",
+    "link": "https://www.newswire.co.kr/newsRead.php?no=1029842",
+    "image": "images/news0306.jpg"
+  },
+  {
+    "title": "사단법인 상상, 광주광덕고와 손잡고 ‘STEAM/AI 교육’ 사회공헌 나선다",
+    "desc": "광주광덕고 FRC팀 ‘SWing’ 학생들, 광주디딤돌지역아동센터서 교육 재능 기부",
+    "date": "2026-01-08",
+    "link": "https://www.newswire.co.kr/newsRead.php?no=1026668",
+    "image": "images/news0108.jpg"
+  },
+  {
+    "title": "광덕고 로봇 동아리 '오소프', 호주FRC대회 '신인상'",
+    "desc": "지역사회 과학기술 전파 기여 등 공로 인정받아",
+    "date": "2026-03-17",
+    "link": "https://www.namdonews.com/news/articleView.html?idxno=904344",
+    "image": "images/news0317.jpg"
   }
 ]
