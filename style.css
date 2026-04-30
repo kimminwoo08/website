@@ -16,89 +16,145 @@ main {
 }
 
 
-/* header */
+/* ================= 상단탭 =================*/
 nav {
   position: fixed;
   top: 0;
   width: 100%;
-  background: black;
+  background: white;
   padding: 15px 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   z-index: 1000;
+  box-sizing: border-box;
 }
 
-/* 로고 */
+/* 레이아웃 */
+.navbar {
+  display: flex;
+  align-items: center;
+}
+
+/* 왼쪽 */
 .logo {
   flex: 1;
-  margin-left: 40px;
 }
 
 .logo img {
-  height: 45px;
+  height: 60px;
 }
 
-/* 메뉴 */
+/* 가운데 메뉴 */
 .menu {
-  flex: 1;
+  flex: 2;
   display: flex;
+  align-items: center;
   justify-content: center;
-  gap: 30px;
+  gap: 20px;
 }
 
+/* 메뉴 링크 */
 .menu a {
-  color: white;
+  color: black;
   text-decoration: none;
+  position: relative;
+  padding: 5px 0;
+}
+
+.menu-title {
+  color: black;
+  cursor: default; /* 클릭 불가 느낌 */
   position: relative;
 }
 
-/* hover 효과 */
+/* hover + active */
+.menu a:hover,
+.menu a.active {
+  color: #007bff;
+}
+
+/* 밑줄 애니메이션 */
 .menu a::after {
   content: "";
   position: absolute;
   left: 0;
-  bottom: -5px;
-  width: 0;
+  bottom: -3px;
+  width: 0%;
   height: 2px;
-  background: white;
+  background: gray;
   transition: 0.3s;
 }
 
-.menu a:hover::after {
+.menu a:hover::after,
+.menu a.active::after {
   width: 100%;
 }
 
-/* 오른쪽 공간 */
+/* 오른쪽 */
 .nav-right {
   flex: 1;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
 }
 
+/*오른쪽 소셜아이콘*/
+.nav-right img {
+  height: 40px;
+}
 
-/* 드롭다운 */
+/* 버튼 */
+.contact-btn {
+  padding: 8px 15px;
+  background: black;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.contact-btn:hover {
+  background: #007bff;
+}
+
+/* ===== 드롭다운 ===== */
 .dropdown {
   position: relative;
+  display: flex;
+  align-items: center;
 }
 
+/* 드롭다운 박스 */
 .dropdown-content {
-  display: none;
   position: absolute;
   top: 100%;
   left: 0;
-  background: black;
+  background: white;
   min-width: 140px;
+  display: none;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* ⭐ 살짝 그림자 */
 }
 
-.dropdown-content a {
-  display: block;
-  padding: 10px;
-  color: white;
-}
-
+/* 드롭다운 보이기 */
 .dropdown:hover .dropdown-content {
   display: block;
 }
 
+/* 드롭다운 링크 */
+.dropdown-content a {
+  display: block;
+  padding: 10px;
+  color: black;
+  position: relative;
+}
+
+/* 드롭다운 hover */
+.dropdown-content a:hover {
+  color: #007bff;
+}
+
+/* 드롭다운 밑줄 위치 */
+.dropdown-content a::after {
+  bottom: 2px;
+}
 
 /* 콘텐츠 */
 section {
@@ -113,25 +169,10 @@ section {
   justify-content: center;
   color: white;
 }
+/* ============================================== */
 
 
-/* 하위탭 이동 버튼*/
-.buttons {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  margin-top: 30px;
-}
-
-.buttons a {
-  padding: 15px 30px;
-  background: black;
-  color: white;
-  text-decoration: none;
-}
-
-
-/* 문의 폼= */
+/* ================= 문의 폼 =================*/
 .contact-section {
   padding: 120px 20px;
   text-align: center;
@@ -162,41 +203,89 @@ button {
 button:hover {
   background: #333;
 }
+/* ============================================== */
 
 
-/*footer */
-footer {
-  background: #222;
+/* ================= footer =================*/
+.footer {
+  background: #222222;
   color: white;
-  text-align: center;
   padding: 40px 60px;
 }
 
-.footer-content h3 {
-  max-width: 800px;
-  font-size: 25px;
-  margin-left: 3%;
-  margin-bottom: 40px;
+/* ⭐ 핵심 */
+.footer-top {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr;
+  column-gap: 40px; /* 60 → 40 추천 */
+  align-items: start;
+}
+
+/* 컬럼 */
+.footer-col {
   text-align: left;
 }
 
-.footer-content p {
-  max-width: 800px;
-  font-size: 15px;
-  margin-left: 3%;
-  text-align: left;
+/* 로고 */
+.footer-logo {
+  width: 120px;
+  margin-bottom: 10px;
 }
 
-.footer-content .info {
-    margin-top: 10px;
-    margin-bottom: 0px;
+/* 제목 */
+.footer-col h4 {
+  margin-bottom: 12px;
 }
 
-.footer-content .copyright {
-    margin-top: 30px;
+/* 🔥 바로가기 (중요) */
+.footer-col a {
+  display: block;           /* 세로 정렬 핵심 */
+  color: white;
+  text-decoration: none;
+  margin-bottom: 8px;
+  line-height: 1.4;
 }
 
-/* 뉴스 */
+.footer-col a:hover {
+  color: #007bff;
+}
+
+/* SNS */
+.footer-social {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.footer-social a {
+  display: inline-block;   /* 아이콘 가로 유지 */
+}
+
+.footer-social img {
+  width: 60px;
+}
+
+/* 구분선 */
+.footer-line {
+  height: 1px;
+  background: gray;
+  margin: 30px 0;
+}
+
+/* 하단 */
+.footer-bottom {
+  text-align: center;
+  font-size: 14px;
+  color: #bbb;
+}
+
+.footer-bottom p {
+  margin: 4px 0;
+}
+
+/* ============================================== */
+
+/* ================ 뉴스 카드 =================*/
 .news-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -236,3 +325,4 @@ footer {
   color: gray;
   margin-top: 5px;
 }
+/* ============================================== */
