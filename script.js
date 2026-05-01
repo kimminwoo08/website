@@ -1,10 +1,27 @@
 console.log("JS 실행됨");
 
 // ===== 헤더 =====
+// ===== 헤더 =====
 fetch("header.html")
   .then(res => res.text())
   .then(data => {
     document.body.insertAdjacentHTML("afterbegin", data);
+
+    // 헤더가 들어온 뒤에 스크롤 이벤트 등록
+    let lastScroll = 0;
+    const navbar = document.querySelector("nav");
+
+    window.addEventListener("scroll", function () {
+      const currentScroll = window.pageYOffset;
+
+      if (currentScroll > lastScroll) {
+        navbar.style.top = "-100px"; // 아래로 스크롤하면 숨김
+      } else {
+        navbar.style.top = "0"; // 위로 스크롤하면 보임
+      }
+
+      lastScroll = currentScroll;
+    });
   });
 
 // ===== 푸터 =====

@@ -25,6 +25,8 @@ nav {
   padding: 15px 40px;
   z-index: 1000;
   box-sizing: border-box;
+
+  transition: top 0.8s;
 }
 
 /* 레이아웃 */
@@ -68,7 +70,7 @@ nav {
 /* hover + active */
 .menu a:hover,
 .menu a.active {
-  color: #007bff;
+  color: #B22222;
 }
 
 /* 밑줄 애니메이션 */
@@ -79,7 +81,7 @@ nav {
   bottom: -3px;
   width: 0%;
   height: 2px;
-  background: gray;
+  background: #FF4C4C;
   transition: 0.3s;
 }
 
@@ -112,7 +114,20 @@ nav {
 }
 
 .contact-btn:hover {
-  background: #007bff;
+  background: #B22222;
+}
+
+.icon {
+  transition: 0.3s;
+}
+
+/* hover 시 이미지 변경 */
+.insta:hover {
+  content: url("images/logo/instagram_red.png");
+}
+
+.youtube:hover {
+  content: url("images/logo/youtube_red.png");
 }
 
 /* ===== 드롭다운 ===== */
@@ -148,7 +163,7 @@ nav {
 
 /* 드롭다운 hover */
 .dropdown-content a:hover {
-  color: #007bff;
+  color: #B22222;
 }
 
 /* 드롭다운 밑줄 위치 */
@@ -247,7 +262,7 @@ button:hover {
 }
 
 .footer-col a:hover {
-  color: #007bff;
+  color: #B22222;
 }
 
 /* SNS */
@@ -268,7 +283,7 @@ button:hover {
 /* 구분선 */
 .footer-line {
   height: 1px;
-  background: gray;
+  background: #FF4C4C;
   margin: 30px 0;
 }
 
@@ -324,5 +339,65 @@ button:hover {
   font-size: 12px;
   color: gray;
   margin-top: 5px;
+}
+/* ============================================== */
+
+/* ================ 홈 =================*/
+/* 히어로 섹션 */
+.hero {
+  position: relative;
+  height: 100vh;
+  background-image: url("images/home/main1.jpg"); /* 이미지 경로 수정 */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+  text-align: center;
+}
+
+/* 어두운 오버레이 */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+/* 텍스트 */
+.hero-text {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-text h1 {
+  font-size: 60px;
+  margin-bottom: 10px;
+}
+
+.hero-text p {
+  font-size: 20px;
+}
+
+/* 버튼 */
+.hero-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.hero-btn:hover {
+  background: #0056b3;
 }
 /* ============================================== */
