@@ -347,7 +347,7 @@ button:hover {
 .hero {
   position: relative;
   height: 100vh;
-  background-image: url("images/home/main1.jpg"); /* 이미지 경로 수정 */
+  background-image: url("images/home/main1.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -401,3 +401,65 @@ button:hover {
   background: #0056b3;
 }
 /* ============================================== */
+
+/* ================ 소개 =================*/
+
+/* 상단 이미지 */
+.first-section {
+  text-align: center;
+}
+
+.first-section img {
+  width: 70%;
+  height: auto;
+}
+
+
+/* 공통 2단 레이아웃 (FRC + FTC 같이 사용) */
+.frc-section,
+.ftc-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 150px;
+  padding: 80px 20px;
+}
+
+/* 이미지 */
+.frc-image img,
+.ftc-image img {
+  width: 500px;
+  max-width: 100%;
+  height: auto;
+}
+
+/* 텍스트 */
+.frc-text,
+.ftc-text {
+  max-width: 500px;
+}
+
+.frc-text h2,
+.ftc-text h2 {
+  margin-bottom: 15px;
+}
+
+.frc-text p,
+.ftc-text p {
+  line-height: 1.6;
+}
+
+
+.frc-section {
+  flex-direction: row-reverse;
+}
+
+/* ===================================== */
+
+.swing-section {
+  text-align: center;   /* 가운데 정렬 */
+}
+.swing-section img {
+  width: 40%;           /* ⭐ 크기 조절 핵심 */
+  height: auto;         /* 비율 유지 */
+}
