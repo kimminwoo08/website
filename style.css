@@ -1,5 +1,6 @@
 /* 기본설정 */
-html, body {
+html,
+body {
   margin: 0;
   font-family: sans-serif;
 }
@@ -63,7 +64,8 @@ nav {
 
 .menu-title {
   color: black;
-  cursor: default; /* 클릭 불가 느낌 */
+  cursor: default;
+  /* 클릭 불가 느낌 */
   position: relative;
 }
 
@@ -145,7 +147,8 @@ nav {
   background: white;
   min-width: 140px;
   display: none;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* ⭐ 살짝 그림자 */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  /* ⭐ 살짝 그림자 */
 }
 
 /* 드롭다운 보이기 */
@@ -173,7 +176,8 @@ nav {
 
 /* 콘텐츠 */
 section {
-  padding: 120px 20px; /* nav 겹침 방지 */
+  padding: 120px 20px;
+  /* nav 겹침 방지 */
 }
 
 .hero {
@@ -184,6 +188,7 @@ section {
   justify-content: center;
   color: white;
 }
+
 /* ============================================== */
 
 
@@ -201,7 +206,8 @@ form {
   gap: 15px;
 }
 
-input, textarea {
+input,
+textarea {
   padding: 12px;
   font-size: 14px;
   border: 1px solid #ccc;
@@ -218,6 +224,7 @@ button {
 button:hover {
   background: #333;
 }
+
 /* ============================================== */
 
 
@@ -232,7 +239,8 @@ button:hover {
 .footer-top {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
-  column-gap: 40px; /* 60 → 40 추천 */
+  column-gap: 40px;
+  /* 60 → 40 추천 */
   align-items: start;
 }
 
@@ -254,7 +262,8 @@ button:hover {
 
 /* 🔥 바로가기 (중요) */
 .footer-col a {
-  display: block;           /* 세로 정렬 핵심 */
+  display: block;
+  /* 세로 정렬 핵심 */
   color: white;
   text-decoration: none;
   margin-bottom: 8px;
@@ -273,7 +282,8 @@ button:hover {
 }
 
 .footer-social a {
-  display: inline-block;   /* 아이콘 가로 유지 */
+  display: inline-block;
+  /* 아이콘 가로 유지 */
 }
 
 .footer-social img {
@@ -340,6 +350,7 @@ button:hover {
   color: gray;
   margin-top: 5px;
 }
+
 /* ============================================== */
 
 /* ================ 홈 =================*/
@@ -400,32 +411,48 @@ button:hover {
 .hero-btn:hover {
   background: #0056b3;
 }
+
 /* ============================================== */
 
 /* ================ 소개 =================*/
 
 /* 상단 이미지 */
-.first-section {
+.first-top-section {
   text-align: center;
 }
 
-.first-section img {
+.first-top-section img {
   width: 70%;
   height: auto;
 }
 
 
+.first-mission {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.first-mission h2 {
+  max-width: 1150px;
+  margin: 0 auto;
+  line-height: 1.7;
+  font-size: 22px;
+  color: #222;
+}
+
 /* 공통 2단 레이아웃 (FRC + FTC 같이 사용) */
+.first-section,
 .frc-section,
 .ftc-section {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 150px;
+  gap: 100px;
   padding: 80px 20px;
 }
 
 /* 이미지 */
+.first-image img,
 .frc-image img,
 .ftc-image img {
   width: 500px;
@@ -434,19 +461,24 @@ button:hover {
 }
 
 /* 텍스트 */
+.first-text,
 .frc-text,
 .ftc-text {
-  max-width: 500px;
+  max-width: 550px;
 }
 
+.first-text h2,
 .frc-text h2,
 .ftc-text h2 {
   margin-bottom: 15px;
+  font-size: 25px;
 }
 
+.first-text p,
 .frc-text p,
 .ftc-text p {
   line-height: 1.6;
+  font-size: 19px;
 }
 
 
@@ -454,12 +486,37 @@ button:hover {
   flex-direction: row-reverse;
 }
 
+.first-website {
+  padding: 80px 20px;
+  text-align: center;
+}
+
+.first-website h2 {
+  max-width: 1150px;
+  margin: 0 auto;
+  line-height: 1.7;
+  font-size: 30px;
+  color: #222;
+}
+
+.first-website a {
+  color: #0000EE;
+  text-decoration: none;
+  font-size: 24px;
+  font-weight: bold;
+
+}
+
 /* ===================================== */
 
 .swing-section {
-  text-align: center;   /* 가운데 정렬 */
+  text-align: center;
+  /* 가운데 정렬 */
 }
+
 .swing-section img {
-  width: 40%;           /* ⭐ 크기 조절 핵심 */
-  height: auto;         /* 비율 유지 */
+  width: 40%;
+  /* ⭐ 크기 조절 핵심 */
+  height: auto;
+  /* 비율 유지 */
 }
