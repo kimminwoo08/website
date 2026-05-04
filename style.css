@@ -65,7 +65,6 @@ nav {
 .menu-title {
   color: black;
   cursor: default;
-  /* 클릭 불가 느낌 */
   position: relative;
 }
 
@@ -148,7 +147,6 @@ nav {
   min-width: 140px;
   display: none;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  /* ⭐ 살짝 그림자 */
 }
 
 /* 드롭다운 보이기 */
@@ -235,12 +233,10 @@ button:hover {
   padding: 40px 60px;
 }
 
-/* ⭐ 핵심 */
 .footer-top {
   display: grid;
   grid-template-columns: 2fr 1fr 1fr;
   column-gap: 40px;
-  /* 60 → 40 추천 */
   align-items: start;
 }
 
@@ -260,10 +256,8 @@ button:hover {
   margin-bottom: 12px;
 }
 
-/* 🔥 바로가기 (중요) */
 .footer-col a {
   display: block;
-  /* 세로 정렬 핵심 */
   color: white;
   text-decoration: none;
   margin-bottom: 8px;
@@ -511,12 +505,9 @@ button:hover {
 
 .swing-section {
   text-align: center;
-  /* 가운데 정렬 */
 }
 
 .swing-section img {
   width: 40%;
-  /* ⭐ 크기 조절 핵심 */
   height: auto;
-  /* 비율 유지 */
 }
