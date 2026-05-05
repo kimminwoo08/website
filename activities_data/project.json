@@ -2,8 +2,8 @@
     {
         "title": "돈키카",
         "date": "2026-03-19",
-        "image": "/images/activities/project1.jpg",
-        "link": "/activities/project_2026.html",
+        "image": "../images/activities/project1.jpg",
+        "link": "../activities/project_2026.html",
         "category": "project"
     }
 ]

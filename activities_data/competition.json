@@ -2,8 +2,8 @@
     {
         "title": "로봇 제작 프로젝트",
         "date": "2026-04-10",
-        "image": "/images/activities_competition/frc.png",
-        "link": "activities_competition/2026.html",
+        "image": "../images/activities_competition/frc.png",
+        "link": "../activities_competition/2026.html",
         "category": "competition"
     }
 ]

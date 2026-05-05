@@ -2,8 +2,8 @@
     {
         "title": "외부 활동",
         "date": "2026-05-01",
-        "image": "/images/activities/outreach1.jpg",
-        "link": "/activities/outreach_2026.html",
+        "image": "../images/activities/outreach1.jpg",
+        "link": "../activities/outreach_2026.html",
         "category": "outreach"
     }
 ]

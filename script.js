@@ -36,7 +36,7 @@ fetch("/header.html")
 
 
 // ===== 푸터 =====
-fetch("/footer.html")
+fetch("../footer.html")
   .then(res => res.text())
   .then(data => {
     document.body.insertAdjacentHTML("beforeend", data);
@@ -61,7 +61,7 @@ if (form) {
     })
       .then(response => {
         if (response.ok) {
-          window.location.href = "/contact_confirm.html";
+          window.location.href = "../contact_confirm.html";
         } else {
           alert("전송 실패");
         }
@@ -74,7 +74,7 @@ if (form) {
 const container = document.getElementById("news-container");
 
 if (container) {
-  fetch("/news.json")
+  fetch("../news.json")
     .then(res => res.json())
     .then(data => {
       data.sort((a, b) => new Date(b.date) - new Date(a.date));
@@ -110,9 +110,9 @@ if (activityContainer) {
   setActiveButton(initialFilter);
 
   Promise.all([
-    fetch("/activities_data/competition.json").then(res => res.json()),
-    fetch("/activities_data/project.json").then(res => res.json()),
-    fetch("/activities_data/outreach.json").then(res => res.json())
+    fetch("../activities_data/competition.json").then(res => res.json()),
+    fetch("../activities_data/project.json").then(res => res.json()),
+    fetch("../activities_data/outreach.json").then(res => res.json())
   ])
     .then(results => {
       const allActivities = results.flat();
@@ -130,8 +130,8 @@ if (activityContainer) {
 
           const newUrl =
             filter === "all"
-              ? "/activities.html"
-              : `/activities.html?filter=${filter}`;
+              ? "../activities.html"
+              : `../activities.html?filter=${filter}`;
 
           history.pushState(null, "", newUrl);
         });
@@ -192,9 +192,9 @@ if (detailNav && activityDetail) {
   const currentFilter = params.get("filter") || "all";
 
   Promise.all([
-    fetch("/activities_data/competition.json").then(res => res.json()),
-    fetch("/activities_data/project.json").then(res => res.json()),
-    fetch("/activities_data/outreach.json").then(res => res.json())
+    fetch("../activities_data/competition.json").then(res => res.json()),
+    fetch("../activities_data/project.json").then(res => res.json()),
+    fetch("../activities_data/outreach.json").then(res => res.json())
   ])
     .then(results => {
       let allActivities = results.flat();

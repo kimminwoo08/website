@@ -124,7 +124,7 @@ nav {
 
 /* hover 시 이미지 변경 */
 .insta:hover {
-  content: url("images/logo/instagram_red.png");
+  content: url("../images/logo/instagram_red.png");
 }
 
 .youtube:hover {
@@ -352,7 +352,7 @@ button:hover {
 .hero {
   position: relative;
   height: 100vh;
-  background-image: url("images/home/main1.jpg");
+  background-image: url("../images/home/main1.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
